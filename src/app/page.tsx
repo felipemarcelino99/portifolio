@@ -1,95 +1,99 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client'
+import BannerVideo from './components/BannerVideo';
+import Header from './components/Header';
+import * as S from './styles'
+import dynamic from 'next/dynamic';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <S.MainContainer>
+      <Header />
+      <S.VideoContainer>
+        <BannerVideo src="/videos/video-banner.mp4" pauseAfterSeconds={3} />
+        <S.Title>GN Detailing</S.Title>
+      </S.VideoContainer>
+      <S.Sobre id="sobre">
+        <S.Indent>
+            <S.ContainerSobre>
+                <S.ImagemSobre src='/images/sobre.jpeg' width="853" height="1280" />
+                <S.BoxText>
+                  <h2>Sobre mim</h2>
+                  <p>Com mais de 25 anos de experiência no setor de estética automotiva, minha jornada profissional tem sido dedicada à excelência e inovação. Sou formado em Processos Gerenciais e atuo como supervisor técnico em mais de 35 concessionárias no interior de São Paulo.</p>
+                  <p>Minha carreira é marcada pela responsabilidade de introduzir e desenvolver novos materiais no mercado, além de formar e treinar novos profissionais na área. As técnicas que ensino e os métodos que desenvolvo para evitar desperdícios de materiais têm impactado positivamente a receita das empresas onde trabalho, melhorando a eficiência e a qualidade dos serviços prestados.</p>
+                  <p>Sou palestrante em cursos profissionalizantes e também ofereço treinamentos específicos para vendedores, sempre buscando compartilhar conhecimento e elevar os padrões da indústria automotiva.</p>
+                </S.BoxText>
+            </S.ContainerSobre>
+        </S.Indent>
+      </S.Sobre>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <S.Servicos>
+        <S.ContainerServicos>
+          <S.BoxTextServicos>
+            <h2>Serviços</h2>
+            <S.ListaServicos>
+              <li>Lavagem à Seco dos Bancos</li>
+              <li>Lavagem à seco do Teto</li>
+              <li>Lavagem à seco de Portas (Parte interna)</li>
+              <li>Limpeza Interna Detalhada</li>
+              <li>Instalação de PPF Completo</li>
+              <li>Instalação de PPF Localizado</li>
+              <li>Polimento Técnico Completo</li>
+              <li>Polimento Técnico Localizado</li>
+              <li>Vitrificação Completa</li>
+              <li>Vitrificação de Faróis</li>
+              <li>Restauração de Faróis</li>
+            </S.ListaServicos>
+          </S.BoxTextServicos>
+          <S.ImagemServicos src='/images/bg-servicos.jpg' width="853" height="1280" />
+        </S.ContainerServicos>
+      </S.Servicos>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <S.Treinamentos>
+        <S.ContainerTreinamentos>
+          <S.ImagemTreinamentos src='/images/polindo.jpeg' width="853" height="1280" />
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+          <S.BoxTextTreinamentos>
+            <h2>Treinamentos<br /> Técnicos</h2>
+            <S.ListaTreinamentos>
+              <li>Lavagem à Seco dos Bancos</li>
+              <li>Lavagem à seco do Teto</li>
+              <li>Lavagem à seco de Portas (Parte interna)</li>
+              <li>Limpeza Interna Detalhada</li>
+              <li>Instalação de PPF Completo</li>
+              <li>Instalação de PPF Localizado</li>
+              <li>Polimento Técnico Completo</li>
+              <li>Polimento Técnico Localizado</li>
+              <li>Vitrificação Completa</li>
+              <li>Vitrificação de Faróis</li>
+              <li>Restauração de Faróis</li>
+            </S.ListaTreinamentos>
+          </S.BoxTextTreinamentos>
+        </S.ContainerTreinamentos>
+      </S.Treinamentos>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
+      <S.Servicos>
+        <S.ContainerServicos>
+          <S.BoxTextServicos>
+            <h2>Treinamentos<br /> Comerciais</h2>
+            <S.ListaServicos>
+              <li>Abordagem</li>
+              <li>Pós-venda</li>
+              <li>Identificação de problemas, para propor soluções corretas</li>
+              <li>Captação de serviços não explorados</li>
+              <li>Qualidade no atendimento</li>
+              <li>Métodos para atingir os resultados esperado</li>
+              <li>Check-list</li>
+            </S.ListaServicos>
+          </S.BoxTextServicos>
+          <S.ImagemServicos src='/images/explicando.jpeg' width="853" height="1280" />
+        </S.ContainerServicos>
+      </S.Servicos>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <S.Contato>
+        
+      </S.Contato>
+
+      
+    </S.MainContainer>
   );
 }
