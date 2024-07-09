@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "GN - Detailer",
-  description: "Portifólio profissional",
+  description: "Portifólio profissional, detail, PPF, Treinamento para polidores, Treinamento para Vendedores, Treinamento para PPF",
 };
 
 export default function RootLayout({
@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={inter.className}>
-        {children}
+          {children}
       </body>
     </html>
   );

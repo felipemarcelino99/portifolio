@@ -4,6 +4,12 @@ export const Indent = styled.div`
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
+
+    
+    @media only screen and (max-width: 975px){
+        max-width: 100%;
+        padding: 0 10px;
+    }
 `
 export const MainContainer = styled.main`
     max-width: 100%;
@@ -20,6 +26,10 @@ export const VideoContainer = styled.section`
     display: flex;
     align-items: flex-start;
     justify-content: center;
+
+    @media only screen and (max-width: 975px){
+        min-height: 60vh;
+    }
 `
 
 export const Container = styled.div`
@@ -37,18 +47,19 @@ export const Title = styled.h1`
     z-index: 5;
     font-family: 'Robot Monster', sans-serif;
     margin-top: 14.5%;
-`
-export const LoadingContainer = styled.div`
-    position: fixed;
-    left: 0;
-    top: 0;
-    width:100%;
-    height:100%;
-    z-index: 999;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    background-color: black;
+
+    @media only screen and (max-width: 1400px){
+        font-size: 10rem;
+    }
+
+    @media only screen and (max-width: 975px){
+        font-size: 5rem;
+        margin-top: 15rem;
+    }
+    
+    @media only screen and (max-width: 450px){
+        font-size: 3.75rem;
+    }
 `
 
 export const Sobre = styled.section`
@@ -70,15 +81,24 @@ export const Sobre = styled.section`
             background: rgba(0,0,0, .85);
             z-index: -1;
     }
+
+    @media only screen and (max-width: 975px){
+        padding: 50px 0;
+    }
 `
 
 export const ContainerSobre = styled.div`
     max-width: 100%;
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 50px;
+
+    @media only screen and (max-width: 975px){
+        flex-direction: column-reverse;
+        gap: 30px
+    }
 `
 export const BoxText = styled.div`
     max-width: 100%;
@@ -108,6 +128,33 @@ export const BoxText = styled.div`
     p + p {
         margin-top: 10px;
     }
+
+    @media only screen and (max-width: 1400px){
+        max-width: 50%;
+
+        h2 {
+            font-size: 10rem;
+        }
+
+        p {
+            font-size: 1.25rem;
+        }
+    }
+
+    @media only screen and (max-width: 975px){
+        max-width: 100%;
+
+        h2 {
+            font-size: 7rem;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    }
 `
 export const ImagemSobre = styled.img`
     height: auto;
@@ -119,6 +166,11 @@ export const ImagemSobre = styled.img`
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 0 100px -5px rgba(255,255,255,.2);
+
+    @media only screen and (max-width: 1400px){
+        max-width: 350px;
+        max-height: 350px;
+    }
 `
 
 export const Servicos = styled.section`
@@ -148,6 +200,13 @@ export const ContainerServicos = styled.div`
     justify-content: flex-end;
     align-items: center;
     gap: 50px;
+
+    @media only screen and (max-width: 975px){
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        padding-top: 50px;
+    }
 `
 
 export const BoxTextServicos = styled.div`
@@ -163,6 +222,24 @@ export const BoxTextServicos = styled.div`
         text-transform: uppercase;
         margin-bottom: 30px;
         font-family: 'Bebas Neue'
+    }
+
+    @media only screen and (max-width: 1400px){
+        h2 {
+            font-size: 6rem;
+        }
+    }
+
+    @media only screen and (max-width: 975px){
+        max-width: 100%;
+        width: 100%;
+        padding: 0 10px;
+
+        h2 {
+            font-size: 5rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
     }
 `
 
@@ -181,6 +258,23 @@ export const ListaServicos = styled.ul`
     li + li {
         margin-top: 15px
     }
+
+    @media only screen and (max-width: 975px){
+        width: fit-content;
+        margin: 0 auto;
+        padding-left: 0px;
+        list-style: none;
+        
+        li {
+            list-style: none;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        li + li {
+            margin-top: 10px
+        }
+    }
 `
 
 export const ImagemServicos = styled.img`
@@ -191,6 +285,10 @@ export const ImagemServicos = styled.img`
     display: block;
     object-position: center;
     object-fit: cover;
+
+    @media only screen and (max-width: 975px){
+        max-width: 100%;
+    }
 `
 
 export const Treinamentos = styled.section`
@@ -220,6 +318,11 @@ export const ContainerTreinamentos = styled.div`
     justify-content: flex-start;
     align-items: center;
     gap: 50px;
+
+    @media only screen and (max-width: 975px){
+       flex-direction: column-reverse;
+       gap: 50px;
+    }
 `
 
 export const BoxTextTreinamentos = styled.div`
@@ -235,6 +338,23 @@ export const BoxTextTreinamentos = styled.div`
         text-transform: uppercase;
         margin-bottom: 35px;
         font-family: 'Bebas Neue'
+    }
+
+    @media only screen and (max-width: 1400px){
+        h2 {
+            font-size: 6rem;
+        }
+    }
+
+    @media only screen and (max-width: 975px){
+        max-width: 100%;
+        width: 100%;
+        padding-top: 50px;
+
+        h2 {
+            font-size: 5rem;
+            text-align: center;
+        }
     }
 `
 
@@ -265,6 +385,23 @@ export const ListaTreinamentos = styled.ul`
     li + li {
         margin-top: 15px
     }
+
+    @media only screen and (max-width: 1400px){
+        padding: 0 10px;
+
+        li {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        li:before {
+            display: none;
+        }
+
+        li + li {
+            margin-top: 10px
+        }
+    }
 `
 
 export const ImagemTreinamentos = styled.img`
@@ -275,11 +412,141 @@ export const ImagemTreinamentos = styled.img`
     display: block;
     object-position: center;
     object-fit: cover;
+
+    @media only screen and (max-width: 1400px){
+        max-width: 100%;       
+    }
 `
 
 export const Contato = styled.section`
     max-width: 100%;
     width: 100%;
-    padding: 50px 0;
+    padding: 100px 0;
     background: #FFF;
+
+    h3 {
+        text-align: center;
+        font-size: 10rem;
+        color: #DC2F2F;
+        font-weight: bold;
+        line-height: 1;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+        font-family: 'Bebas Neue'
+    }
+
+    @media only screen and (max-width: 1400px){
+        h3 {
+            font-size: 6rem;
+        }
+    }
+
+    @media only screen and (max-width: 975px){
+        padding: 50px 0;
+
+        h3 {
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+    }
+`
+
+export const Form = styled.form`
+
+    border: 2px solid  #D0D3D4;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(220, 47, 47, .2);
+    padding: 50px 30px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+
+
+    & > fieldset {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    & > fieldset + fieldset {
+        margin-top: 20px;
+    }
+
+    & > fieldset > fieldset {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 10px;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    & > fieldset > fieldset label {
+        color: #000;
+        font-weight: bold;
+        font-size: 1.4rem;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    & > fieldset > fieldset input,
+    & > fieldset > fieldset select,
+    & > fieldset > fieldset textarea {
+        border: 2px solid  #D0D3D4;
+        border-radius: 10px;
+        padding: 8px 15px;
+        font-size: 1.6rem;
+        color: #000;
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    & > button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 0 auto;
+        padding: 10px 25px;
+        background: #DC2F2F;
+        color: #FFF;
+        text-align: center;
+        font-weight: 900;
+        font-size: 2.4rem;
+        margin-top: 30px;
+        font-family: 'Bebas Neue';
+        text-transform: uppercase;
+        border-radius: 8px;
+        letter-spacing: 2px;
+
+    }
+
+    @media only screen and (max-width: 975px){
+        padding: 35px 20px;
+
+        & > fieldset {
+            flex-direction: column;
+        }
+
+        & > fieldset > fieldset label {
+            font-size: 1.1rem;
+        }
+
+        & > fieldset > fieldset input,
+        & > fieldset > fieldset select,
+        & > fieldset > fieldset textarea {
+            padding: 5px 10px;
+            font-size: 1.4rem;
+        }
+
+        & > button {
+            padding: 7px 15px;
+            background: #DC2F2F;
+            font-size: 1.6rem;
+        }
+    }
 `

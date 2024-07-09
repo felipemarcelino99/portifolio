@@ -1,17 +1,20 @@
 'use client'
 import BannerVideo from './components/BannerVideo';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import * as S from './styles'
-import dynamic from 'next/dynamic';
 
 export default function Home() {
   return (
     <S.MainContainer>
+
       <Header />
+      
       <S.VideoContainer>
-        <BannerVideo src="/videos/video-banner.mp4" pauseAfterSeconds={3} />
+        <BannerVideo src="/videos/video-banner2.mp4" />
         <S.Title>GN Detailing</S.Title>
       </S.VideoContainer>
+     
       <S.Sobre id="sobre">
         <S.Indent>
             <S.ContainerSobre>
@@ -26,7 +29,7 @@ export default function Home() {
         </S.Indent>
       </S.Sobre>
 
-      <S.Servicos>
+      <S.Servicos id="servicos">
         <S.ContainerServicos>
           <S.BoxTextServicos>
             <h2>Serviços</h2>
@@ -48,10 +51,9 @@ export default function Home() {
         </S.ContainerServicos>
       </S.Servicos>
 
-      <S.Treinamentos>
-        <S.ContainerTreinamentos>
+      <S.Treinamentos id="treinamentos">
+        <S.ContainerTreinamentos>  
           <S.ImagemTreinamentos src='/images/polindo.jpeg' width="853" height="1280" />
-
           <S.BoxTextTreinamentos>
             <h2>Treinamentos<br /> Técnicos</h2>
             <S.ListaTreinamentos>
@@ -89,10 +91,46 @@ export default function Home() {
         </S.ContainerServicos>
       </S.Servicos>
 
-      <S.Contato>
-        
-      </S.Contato>
+      <S.Contato id="contato">
+        <S.Indent>
+            <h3>Contato</h3>
+            <S.Form>
+              <fieldset>
+                <fieldset>
+                  <label htmlFor="nome">Nome/Razão Social</label>
+                  <input type="text" id="nome" />
+                </fieldset>
+                <fieldset>
+                  <label htmlFor="email">E-mail</label>
+                  <input type="email" id="email" />
+                </fieldset>
+              </fieldset>
+              <fieldset>
+                <fieldset>
+                  <label htmlFor="pessoa">Pessoa</label>
+                  <select id="pessoa">
+                    <option value=''>Selecione...</option>
+                    <option value="fisica">Física</option>
+                    <option value="juridica">Jurídica</option>
+                  </select>
+                </fieldset>
+                <fieldset>
+                  <label htmlFor="telefone">Telefone</label>
+                  <input type="text" id="telefone" />
+                </fieldset>
+              </fieldset>
+              <fieldset>
+                <fieldset>
+                  <label htmlFor="mensagem">Mensagem</label>
+                  <textarea name="mensagem" id="mensagem" rows={10}></textarea>
+                </fieldset>
+              </fieldset>
+              <button type="submit">Enviar</button>
+            </S.Form>
+        </S.Indent>
+      </S.Contato>    
 
+      <Footer />  
       
     </S.MainContainer>
   );

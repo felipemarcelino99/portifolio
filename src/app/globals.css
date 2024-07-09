@@ -16,6 +16,7 @@ html {
   user-select: none;
   font-size: 62.5%;
   font-family: 'Bebas Neue', sans-serif;
+  scroll-behavior: smooth;
 }
 
 a, button {
