@@ -1,6 +1,7 @@
 'use client'
 import BannerVideo from './components/BannerVideo';
 import Footer from './components/Footer';
+import Form from './components/Form';
 import Header from './components/Header';
 import * as S from './styles'
 
@@ -94,39 +95,7 @@ export default function Home() {
       <S.Contato id="contato">
         <S.Indent>
             <h3>Contato</h3>
-            <S.Form>
-              <fieldset>
-                <fieldset>
-                  <label htmlFor="nome">Nome/Razão Social</label>
-                  <input type="text" id="nome" />
-                </fieldset>
-                <fieldset>
-                  <label htmlFor="email">E-mail</label>
-                  <input type="email" id="email" />
-                </fieldset>
-              </fieldset>
-              <fieldset>
-                <fieldset>
-                  <label htmlFor="pessoa">Pessoa</label>
-                  <select id="pessoa">
-                    <option value=''>Selecione...</option>
-                    <option value="fisica">Física</option>
-                    <option value="juridica">Jurídica</option>
-                  </select>
-                </fieldset>
-                <fieldset>
-                  <label htmlFor="telefone">Telefone</label>
-                  <input type="text" id="telefone" />
-                </fieldset>
-              </fieldset>
-              <fieldset>
-                <fieldset>
-                  <label htmlFor="mensagem">Mensagem</label>
-                  <textarea name="mensagem" id="mensagem" rows={10}></textarea>
-                </fieldset>
-              </fieldset>
-              <button type="submit">Enviar</button>
-            </S.Form>
+            <Form />
         </S.Indent>
       </S.Contato>    
 
